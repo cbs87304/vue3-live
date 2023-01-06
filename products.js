@@ -24,7 +24,7 @@ createApp({
     },
     //渲染產品資料庫至畫面
     getData() {
-      const url = `${this.apiUrl}/api/${this.apiPath}/admin/products/all`;
+      const url = `${this.apiUrl}/api/${this.apiPath}/admin/products`;
       axios
       .get(url)
         .then((response) => {
