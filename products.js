@@ -4,7 +4,7 @@ createApp({
   data() {
     return {
       apiUrl: "https://vue3-course-api.hexschool.io/v2",
-      apiPath: "cbs3345678",//每個人設定不一樣
+      apiPath: "cbs33",//每個人設定不一樣
       products: [],
       tempProduct: {},
     }
@@ -19,12 +19,12 @@ createApp({
         })
         .catch((err) => {
           alert(err.response.data.message)
-          window.location = 'login.html'; //未登入或登入錯誤,顯示錯誤資訊,並跳回登入畫面
+          window.location = 'index.html'; //未登入或登入錯誤,顯示錯誤資訊,並跳回登入畫面
         })
     },
     //渲染產品資料庫至畫面
     getData() {
-      const url = `${this.apiUrl}/api/${this.apiPath}/admin/products`;
+      const url = `${this.apiUrl}/api/${this.apiPath}/admin/products/all`;
       axios
       .get(url)
         .then((response) => {
